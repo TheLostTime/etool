@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.example</groupId>
+    <artifactId>javafxdemo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>javafxdemo</name>
+    <description>Demo project for Spring Boot</description>
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.jdk>${java.version}</project.build.jdk>
+        <springboot-javafx-support.version>1.3.15</springboot-javafx-support.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.roskenet</groupId>
+            <artifactId>springboot-javafx-support</artifactId>
+            <version>${springboot-javafx-support.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>3.14</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.66</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>8.8.3</version>
+                <configuration>
+                    <mainClass>com.example.demo.DemoApplication</mainClass>
+                    <vendor>example</vendor>
+                    <bundleArguments>
+                        <runtime />
+                    </bundleArguments>
+                </configuration>
+            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>io.github.fvarrui</groupId>-->
+<!--                <artifactId>javapackager</artifactId>-->
+<!--                <version>1.6.6</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>package</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            &lt;!&ndash; 启动类 &ndash;&gt;-->
+<!--                            <mainClass>com.example.demo.DemoApplication</mainClass>-->
+<!--                            &lt;!&ndash; 绑定自定义JRE路径&ndash;&gt;-->
+<!--                            <bundleJre>true</bundleJre>-->
+<!--                            <jrePath>D:\jdk1.8\jre</jrePath>-->
+<!--                            <generateInstaller>true</generateInstaller>-->
+<!--                            <administratorRequired>false</administratorRequired>-->
+<!--                            &lt;!&ndash; 操作系统&ndash;&gt;-->
+<!--                            <platform>windows</platform>-->
+<!--                            <copyDependencies>true</copyDependencies>-->
+<!--                            &lt;!&ndash; 名称与版本&ndash;&gt;-->
+<!--                            <displayName>javaFXCalc</displayName>-->
+<!--                            <name>javaFXCalc</name>-->
+<!--                            <version>1.0</version>-->
+<!--                            &lt;!&ndash; 手动引入额外资源&ndash;&gt;-->
+<!--&lt;!&ndash;                            <additionalResources>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <additionalResource>D:\Item\GD_AmtHardwareTest1.0\datas</additionalResource>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <additionalResource>D:\Item\GD_AmtHardwareTest1.0\lib</additionalResource>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </additionalResources>&ndash;&gt;-->
+<!--                            &lt;!&ndash;详细参数配置&ndash;&gt;-->
+<!--                            <winConfig>-->
+<!--                                <icoFile>D:\Item\GD_AmtHardwareTest1.0\src\main\ico\app.ico</icoFile>-->
+<!--                                <generateSetup>false</generateSetup>-->
+<!--                                <generateMsi>false</generateMsi>-->
+<!--                                <generateMsm>false</generateMsm>-->
+<!--                            </winConfig>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+
+</project>
