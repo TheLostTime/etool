@@ -10,8 +10,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -22,43 +23,19 @@ import java.util.ResourceBundle;
 public class SecStageController implements Initializable {
 
     @FXML
-    private TextField dxzj;
+    private ChoiceBox<?> dxxh;
 
     @FXML
-    private ChoiceBox<?> dxxh;
+    private TextField dxfls;
+
+    @FXML
+    private TextField dxizj;
 
     @FXML
     private TextField dxzldz;
 
     @FXML
-    private ChoiceBox<?> dcfldsx;
-
-    @FXML
     private TextField fljj;
-
-    @FXML
-    private TextField xlssrl;
-
-    @FXML
-    private TextField xldydj;
-
-    @FXML
-    private TextField sdglys;
-
-    @FXML
-    private TextField xtpl;
-
-    @FXML
-    private TextField yhfxdzk;
-
-    @FXML
-    private TextField yhlxdzk;
-
-    @FXML
-    private TextField ehfxdzk;
-
-    @FXML
-    private TextField ehlxdzk;
 
     @FXML
     private TextField dddz;
@@ -67,202 +44,88 @@ public class SecStageController implements Initializable {
     private TextField dddzl;
 
     @FXML
-    private TextField hjwd;
+    private TextField dxzj;
 
     @FXML
-    private TextField zkcdl;
+    private TextField dxdz;
 
     @FXML
-    private AnchorPane picAnchorPaneSec;
+    private AnchorPane picAnchorPanel;
 
     @FXML
-    private TextField dxydzjl;
+    private ImageView txImageView;
 
     @FXML
-    private TextField dxedzjl;
+    private ChoiceBox<?> chooseLg;
 
     @FXML
-    private TextField dxsdzjl;
+    private TextField Glx;
 
     @FXML
-    private TextField dxsidzjl;
+    private TextField Gly;
 
     @FXML
-    private TextField dxwdzjl;
+    private ChoiceBox<?> chooseLa;
 
     @FXML
-    private TextField dxldzjl;
+    private TextField Alx;
 
     @FXML
-    private TextField dxyddjl;
+    private TextField Aly;
 
     @FXML
-    private TextField dxeddjl;
+    private ChoiceBox<?> chooseLb;
 
     @FXML
-    private TextField dxsddjl;
+    private TextField Blx;
 
     @FXML
-    private TextField dxsiddjl;
+    private TextField Bly;
 
     @FXML
-    private TextField dxwddjl;
+    private ChoiceBox<?> chooseLc;
 
     @FXML
-    private TextField dxlddjl;
+    private TextField Clx;
 
     @FXML
-    private RadioButton radiozy;
+    private TextField Cly;
 
     @FXML
-    private ToggleGroup line_selection1;
+    private ChoiceBox<?> chooseA1;
 
     @FXML
-    private RadioButton radioyy;
+    private TextField Arx;
 
     @FXML
-    private RadioButton radioze;
+    private TextField Ary;
 
     @FXML
-    private ToggleGroup line_selection2;
+    private ChoiceBox<?> chooseRg;
 
     @FXML
-    private RadioButton radioye;
+    private TextField Grx;
 
     @FXML
-    private RadioButton radiozs;
+    private TextField Gry;
 
     @FXML
-    private ToggleGroup line_selection3;
+    private ChoiceBox<?> chooseB1;
 
     @FXML
-    private RadioButton radioys;
+    private TextField Brx;
 
     @FXML
-    private RadioButton radiozsi;
+    private TextField Bry;
 
     @FXML
-    private ToggleGroup line_selection4;
+    private ChoiceBox<?> chooseC1;
 
     @FXML
-    private RadioButton radioysi;
+    private TextField Crx;
 
     @FXML
-    private RadioButton radiozw;
-
-    @FXML
-    private ToggleGroup line_selection5;
-
-    @FXML
-    private RadioButton radioyw;
-
-    @FXML
-    private RadioButton radiozl;
-
-    @FXML
-    private ToggleGroup line_selection6;
-
-    @FXML
-    private RadioButton radioyl;
-
-    @FXML
-    private RadioButton dxzy;
-
-    @FXML
-    private ToggleGroup line_selection7;
-
-    @FXML
-    private RadioButton dxyy;
-
-    @FXML
-    private RadioButton dxze;
-
-    @FXML
-    private ToggleGroup line_selection8;
-
-    @FXML
-    private TextField dixyddjl;
-
-    @FXML
-    private TextField dixydzjl;
-
-    @FXML
-    private TextField dixeddjl;
-
-    @FXML
-    private TextField dixedzjl;
-
-    @FXML
-    private RadioButton dxye;
-
-    @FXML
-    private Button refreshPicBtn;
-
-    @FXML
-    private TextField dxyzj;
-
-    @FXML
-    private ChoiceBox<?> dxyxh;
-
-    @FXML
-    private ChoiceBox<?> dxexh;
-
-    @FXML
-    private TextField dxyzldz;
-
-    @FXML
-    private TextField dxewj;
-
-    @FXML
-    private TextField dxezldz;
-
-    @FXML
-    private RadioButton bhwqk;
-
-    @FXML
-    private ToggleGroup radiohwcsGroup;
-
-    @FXML
-    private ChoiceBox<?> bhwyh;
-
-    @FXML
-    private ChoiceBox<?> bhweh;
-
-    @FXML
-    private TextField bhwcd;
-
-    @FXML
-    private RadioButton hwqk;
-
-    @FXML
-    private TextField hwydcd;
-
-    @FXML
-    private TextField hwedcd;
-
-    @FXML
-    private TextField hwsdcd;
-
-    @FXML
-    private ChoiceBox<?> hwydyh;
-
-    @FXML
-    private ChoiceBox<?> hwedyh;
-
-    @FXML
-    private ChoiceBox<?> hwsdyh;
-
-    @FXML
-    private ChoiceBox<?> hwydeh;
-
-    @FXML
-    private ChoiceBox<?> hwedeh;
-
-    @FXML
-    private ChoiceBox<?> hwsdeh;
-
-    @FXML
-    private ChoiceBox<?> sfxz;
+    private TextField Cry;
 
     @FXML
     private Button retInputBtn;
@@ -275,8 +138,28 @@ public class SecStageController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        drawPanePic("3.png");
     }
+
+    public void drawPanePic(String picName){
+        txImageView.setImage(new Image("image/" + picName));
+        txImageView.setFitWidth(677);
+        txImageView.setFitHeight(568);
+        txImageView.setLayoutX(170);
+        txImageView.setLayoutY(17);
+    }
+
+    public void drawPoint(int prefWidth,int prefHeight,int layX,int layY,String id) {
+        TextField time = new TextField();
+        time.setPrefHeight(prefHeight);
+        time.setPrefWidth(prefWidth);
+        time.setLayoutX(layX);
+        time.setLayoutY(layY);
+        time.setId(id);
+        picAnchorPanel.getChildren().add(time);
+    }
+
+
 
     @FXML
     void startCalcAction(ActionEvent event) {
@@ -293,12 +176,6 @@ public class SecStageController implements Initializable {
         Stage stage = (Stage) retInputBtn.getScene().getWindow();
         stage.close();
         DemoApplication.showView(InputStageView.class);
-
-        //初始化首页图片
-        TitledPane originTitledPane = (TitledPane) stage.getScene().getRoot().getChildrenUnmodifiable().get(1);
-        Pane originTitleSkinPane = (Pane)originTitledPane.getChildrenUnmodifiable().get(0);
-        AnchorPane originAnchorPane = (AnchorPane)((Pane)originTitleSkinPane.getChildren().get(0)).getChildren().get(3);
-        originAnchorPane.getChildren().addAll(DataSource.AnchorPaneMap.get("picAnchorPanel").getChildren());
     }
 
     @FXML

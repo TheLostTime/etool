@@ -1,300 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 
+<?import java.lang.String?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.SecStageController">
-    <top>
-        <HBox prefHeight="207.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
-            <children>
-                <TitledPane animated="false" prefHeight="207.0" prefWidth="326.0" text="导线参数输入">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="429.0">
-                            <children>
-                                <Label layoutX="24.0" layoutY="14.0" text="导线直径:" />
-                                <TextField fx:id="dxzj" layoutX="134.0" layoutY="10.0" prefHeight="26.0" prefWidth="131.0" />
-                                <Label layoutX="274.0" layoutY="14.0" text="mm" />
-                                <Label layoutX="24.0" layoutY="46.0" text="导线型号:" />
-                                <ChoiceBox fx:id="dxxh" layoutX="135.0" layoutY="40.0" prefHeight="28.0" prefWidth="134.0">
-                                    <String fx:value="多层钢芯铝线" />
-                                    <String fx:value="多层钢芯铝线2" />
-                                    <String fx:value="多层钢芯铝线3" />
-                                </ChoiceBox>
-                                <Label layoutX="24.0" layoutY="80.0" text="导线直流电阻:" />
-                                <TextField fx:id="dxzldz" layoutX="135.0" layoutY="76.0" prefHeight="26.0" prefWidth="133.0" />
-                                <Label layoutX="270.0" layoutY="80.0" text="Ω/km" />
-                                <Label layoutX="24.0" layoutY="112.0" text="对称分类导数线:" />
-                                <ChoiceBox fx:id="dcfldsx" layoutX="135.0" layoutY="107.0" prefHeight="28.0" prefWidth="136.0">
-                                    <String fx:value="对数分裂数n=4" />
-                                    <String fx:value="对数分裂数n=3" />
-                                    <String fx:value="对数分裂数n=2" />
-                                </ChoiceBox>
-                                <Label layoutX="24.0" layoutY="144.0" text="分裂间距:" />
-                                <TextField fx:id="fljj" layoutX="135.0" layoutY="140.0" prefHeight="26.0" prefWidth="134.0" />
-                                <Label layoutX="274.0" layoutY="144.0" text="mm" />
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </TitledPane>
-                <TitledPane animated="false" prefHeight="207.0" prefWidth="677.0" text="系统参数输入">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="155.0" prefWidth="489.0">
-                            <children>
-                                <Label layoutX="14.0" layoutY="14.0" text="线路输送容量:" />
-                                <TextField layoutX="110.0" layoutY="10.0" prefHeight="26.0" prefWidth="69.0" fx:id="xlssrl" />
-                                <Label layoutX="179.0" layoutY="14.0" text="kw" />
-                                <Label layoutX="14.0" layoutY="56.0" text="线路电压等级:" />
-                                <TextField layoutX="110.0" layoutY="52.0" prefHeight="26.0" prefWidth="70.0" fx:id="xldydj" />
-                                <Label layoutX="181.0" layoutY="56.0" text="kv" />
-                                <Label layoutX="14.0" layoutY="100.0" text="送点功率因数:" />
-                                <TextField fx:id="sdglys" layoutX="109.0" layoutY="96.0" prefHeight="26.0" prefWidth="72.0" />
-                                <Label layoutX="14.0" layoutY="135.0" text="系统频率:" />
-                                <TextField layoutX="108.0" layoutY="131.0" prefHeight="26.0" prefWidth="72.0" fx:id="xtpl" />
-                                <Label layoutX="179.0" layoutY="135.0" text="Hz" />
-                                <Label layoutX="223.0" layoutY="14.0" text="I回负序端阻抗:" />
-                                <Label layoutX="223.0" layoutY="56.0" text="I回零序端阻抗:" />
-                                <Label layoutX="223.0" layoutY="100.0" text="II回负序端阻抗:" />
-                                <Label layoutX="223.0" layoutY="135.0" text="II回零序端阻抗:" />
-                                <TextField fx:id="yhfxdzk" layoutX="325.0" layoutY="10.0" prefHeight="26.0" prefWidth="69.0" />
-                                <TextField fx:id="yhlxdzk" layoutX="325.0" layoutY="52.0" prefHeight="26.0" prefWidth="69.0" />
-                                <TextField fx:id="ehfxdzk" layoutX="325.0" layoutY="96.0" prefHeight="26.0" prefWidth="69.0" />
-                                <TextField fx:id="ehlxdzk" layoutX="325.0" layoutY="131.0" prefHeight="26.0" prefWidth="69.0" />
-                                <Label layoutX="394.0" layoutY="14.0" text="Ω" />
-                                <Label layoutX="394.0" layoutY="56.0" text="Ω" />
-                                <Label layoutX="394.0" layoutY="100.0" text="Ω" />
-                                <Label layoutX="394.0" layoutY="135.0" text="Ω" />
-                                <Label layoutX="431.0" layoutY="14.0" text="大地电阻:" />
-                                <Label layoutX="431.0" layoutY="56.0" text="大地电阻率:" />
-                                <Label layoutX="431.0" layoutY="100.0" text="环境温度:" />
-                                <Label layoutX="431.0" layoutY="135.0" text="真空磁导率:" />
-                                <TextField fx:id="dddz" layoutX="510.0" layoutY="10.0" prefHeight="26.0" prefWidth="69.0" />
-                                <TextField fx:id="dddzl" layoutX="510.0" layoutY="52.0" prefHeight="26.0" prefWidth="69.0" />
-                                <TextField fx:id="hjwd" layoutX="510.0" layoutY="96.0" prefHeight="26.0" prefWidth="69.0" />
-                                <TextField fx:id="zkcdl" layoutX="510.0" layoutY="131.0" prefHeight="26.0" prefWidth="69.0" />
-                                <Label layoutX="579.0" layoutY="14.0" text="Ω" />
-                                <Label layoutX="579.0" layoutY="56.0" text="Ωm" />
-                                <Label layoutX="579.0" layoutY="100.0" text="℃" />
-                                <Label layoutX="579.0" layoutY="135.0" text="H/m" />
-                            </children></AnchorPane>
-                    </content>
-                </TitledPane>
-            </children>
-        </HBox>
-    </top>
-    <center>
-        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-            <children>
-                <TitledPane animated="false" prefHeight="696.0" prefWidth="633.0" text="灯塔导线位置参数输入 单位(mm)">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="578.0" prefWidth="631.0">
-                            <children>
-                        <AnchorPane fx:id="picAnchorPaneSec" layoutX="274.0" layoutY="246.0" prefHeight="395.0" prefWidth="340.0" />
-                                <Label layoutX="25.0" layoutY="14.0" text="导线1对轴距离:" />
-                                <Label layoutX="25.0" layoutY="48.0" text="导线2对轴距离:" />
-                                <Label layoutX="25.0" layoutY="86.0" text="导线3对轴距离:" />
-                                <Label layoutX="25.0" layoutY="126.0" text="导线4对轴距离:" />
-                                <Label layoutX="25.0" layoutY="165.0" text="导线5对轴距离:" />
-                                <Label layoutX="25.0" layoutY="200.0" text="导线6对轴距离:" />
-                                <TextField fx:id="dxydzjl" layoutX="132.0" layoutY="10.0" prefHeight="26.0" prefWidth="68.0" />
-                                <TextField fx:id="dxedzjl" layoutX="131.0" layoutY="44.0" prefHeight="26.0" prefWidth="69.0" />
-                                <TextField fx:id="dxsdzjl" layoutX="131.0" layoutY="82.0" prefHeight="26.0" prefWidth="69.0" />
-                                <TextField fx:id="dxsidzjl" layoutX="131.0" layoutY="122.0" prefHeight="26.0" prefWidth="69.0" />
-                                <TextField fx:id="dxwdzjl" layoutX="130.0" layoutY="161.0" prefHeight="26.0" prefWidth="70.0" />
-                                <TextField fx:id="dxldzjl" layoutX="130.0" layoutY="196.0" prefHeight="26.0" prefWidth="70.0" />
-                                <Label layoutX="25.0" layoutY="299.0" text="导线1对地距离:" />
-                                <Label layoutX="25.0" layoutY="348.0" text="导线2对地距离:" />
-                                <Label layoutX="25.0" layoutY="398.0" text="导线3对地距离:" />
-                                <Label layoutX="25.0" layoutY="446.0" text="导线4对地距离:" />
-                                <Label layoutX="25.0" layoutY="496.0" text="导线5对地距离:" />
-                                <Label layoutX="25.0" layoutY="540.0" text="导线6对地距离:" />
-                                <TextField fx:id="dxyddjl" layoutX="132.0" layoutY="294.0" prefHeight="30.0" prefWidth="68.0" />
-                                <TextField fx:id="dxeddjl" layoutX="132.0" layoutY="343.0" prefHeight="30.0" prefWidth="68.0" />
-                                <TextField fx:id="dxsddjl" layoutX="132.0" layoutY="393.0" prefHeight="30.0" prefWidth="69.0" />
-                                <TextField fx:id="dxsiddjl" layoutX="132.0" layoutY="441.0" prefHeight="30.0" prefWidth="69.0" />
-                                <TextField fx:id="dxwddjl" layoutX="132.0" layoutY="491.0" prefHeight="30.0" prefWidth="69.0" />
-                                <TextField fx:id="dxlddjl" layoutX="132.0" layoutY="535.0" prefHeight="30.0" prefWidth="70.0" />
-                                <fx:define>
-                                    <ToggleGroup fx:id="line_selection1" />
-                                </fx:define>
-                                <RadioButton fx:id="radiozy" layoutX="203.0" layoutY="13.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="左">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="line_selection1" />
-                           </toggleGroup></RadioButton>
-                                <RadioButton fx:id="radioyy" layoutX="251.0" layoutY="13.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="右" toggleGroup="$line_selection1" />
-                                <fx:define>
-                                    <ToggleGroup fx:id="line_selection2" />
-                                </fx:define>
-                                <RadioButton fx:id="radioze" layoutX="203.0" layoutY="47.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="左">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="line_selection2" />
-                           </toggleGroup></RadioButton>
-                                <RadioButton fx:id="radioye" layoutX="251.0" layoutY="47.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="右" toggleGroup="$line_selection2" />
-                                <fx:define>
-                                    <ToggleGroup fx:id="line_selection3" />
-                                </fx:define>
-                                <RadioButton fx:id="radiozs" layoutX="203.0" layoutY="85.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="左">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="line_selection3" />
-                           </toggleGroup></RadioButton>
-                                <RadioButton fx:id="radioys" layoutX="251.0" layoutY="85.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="右" toggleGroup="$line_selection3" />
-                                <fx:define>
-                                    <ToggleGroup fx:id="line_selection4" />
-                                </fx:define>
-                                <RadioButton fx:id="radiozsi" layoutX="203.0" layoutY="125.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="左">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="line_selection4" />
-                           </toggleGroup></RadioButton>
-                                <RadioButton fx:id="radioysi" layoutX="251.0" layoutY="125.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="右" toggleGroup="$line_selection4" />
-                                <fx:define>
-                                    <ToggleGroup fx:id="line_selection5" />
-                                </fx:define>
-                                <RadioButton fx:id="radiozw" layoutX="203.0" layoutY="164.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="左">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="line_selection5" />
-                           </toggleGroup></RadioButton>
-                                <RadioButton fx:id="radioyw" layoutX="251.0" layoutY="164.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="右" toggleGroup="$line_selection5" />
-                        <TextField fx:id="dixyddjl" layoutX="457.0" layoutY="10.0" prefHeight="30.0" prefWidth="70.0" />
-                                 <Label layoutX="345.0" layoutY="47.0" text="地线2对地距离:" />
-                                <fx:define>
-                                    <ToggleGroup fx:id="line_selection6" />
-                                </fx:define>
-                        <TextField fx:id="dixydzjl" layoutX="457.0" layoutY="82.0" prefHeight="30.0" prefWidth="70.0" />
-                                <RadioButton fx:id="radiozl" layoutX="203.0" layoutY="198.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="左">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="line_selection6" />
-                           </toggleGroup></RadioButton>
-                                <RadioButton fx:id="radioyl" layoutX="251.0" layoutY="199.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="3.0" text="右" toggleGroup="$line_selection6" />
-                        <Label layoutX="345.0" layoutY="15.0" text="地线1对地距离:" />
-                        <TextField fx:id="dixeddjl" layoutX="457.0" layoutY="43.0" prefHeight="30.0" prefWidth="70.0" />
-                        <Label layoutX="345.0" layoutY="86.0" text="地线1对轴距离:" />
-                        <Label layoutX="345.0" layoutY="127.0" text="地线2对轴距离:" />
-                        <TextField fx:id="dixedzjl" layoutX="457.0" layoutY="120.0" prefHeight="30.0" prefWidth="70.0" />
-                        <fx:define>
-                            <ToggleGroup fx:id="line_selection7" />
-                        </fx:define>
-                        <RadioButton fx:id="dxzy" layoutX="527.0" layoutY="87.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="27.0" text="左">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="line_selection7" />
-                           </toggleGroup></RadioButton>
-                        <RadioButton fx:id="dxyy" layoutX="573.0" layoutY="87.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="27.0" text="右" toggleGroup="$line_selection7" />
-                        <fx:define>
-                            <ToggleGroup fx:id="line_selection8" />
-                        </fx:define>
-                        <RadioButton fx:id="dxze" layoutX="527.0" layoutY="125.0" mnemonicParsing="false" text="左">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="line_selection8" />
-                           </toggleGroup></RadioButton>
-                        <RadioButton fx:id="dxye" layoutX="571.0" layoutY="126.0" mnemonicParsing="false" text="右" toggleGroup="$line_selection8" />
-                        <Button fx:id="refreshPicBtn" layoutX="397.0" layoutY="205.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="212.0" text="刷新导线位置示意图" />
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </TitledPane>
-                <VBox prefHeight="693.0" prefWidth="372.0">
-                    <children>
-                        <TitledPane animated="false" prefHeight="266.0" prefWidth="370.0" text="地线参数输入 单位(mm)">
-                            <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="368.0">
-                           <children>
-                              <Label layoutX="22.0" layoutY="14.0" text="地线1直径:" />
-                              <Label layoutX="22.0" layoutY="45.0" text="地线1型号:" />
-                              <Label layoutX="22.0" layoutY="78.0" text="地线1直流电阻:" />
-                              <Label layoutX="22.0" layoutY="114.0" text="地线2外径:" />
-                              <Label layoutX="22.0" layoutY="148.0" text="地线2型号:" />
-                              <Label layoutX="22.0" layoutY="182.0" text="地线2直流电阻:" />
-                              <TextField fx:id="dxyzj" layoutX="134.0" layoutY="9.0" />
-                              <ChoiceBox fx:id="dxyxh" layoutX="133.0" layoutY="40.0" prefHeight="30.0" prefWidth="207.0">
-                                  <String fx:value="多层钢芯铝线" />
-                                  <String fx:value="多层钢芯铝线2" />
-                                  <String fx:value="多层钢芯铝线3" />
-                              </ChoiceBox>
-                              <ChoiceBox fx:id="dxexh" layoutX="134.0" layoutY="143.0" prefHeight="30.0" prefWidth="209.0">
-                                  <String fx:value="多层钢芯铝线" />
-                                  <String fx:value="多层钢芯铝线2" />
-                                  <String fx:value="多层钢芯铝线3" />
-                              </ChoiceBox>
-                              <TextField fx:id="dxyzldz" layoutX="134.0" layoutY="73.0" />
-                              <TextField fx:id="dxewj" layoutX="134.0" layoutY="109.0" />
-                              <TextField fx:id="dxezldz" layoutX="134.0" layoutY="177.0" />
-                           </children></AnchorPane>
-                            </content>
-                        </TitledPane>
-                        <TitledPane animated="false" prefHeight="338.0" prefWidth="370.0" text="换位参数输入">
-                            <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                               <fx:define>
-                                   <ToggleGroup fx:id="radiohwcsGroup" />
-                               </fx:define>
-                              <RadioButton fx:id="bhwqk" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="不换位情况">
-                                 <toggleGroup>
-                                    <ToggleGroup fx:id="radiohwcsGroup" />
-                                 </toggleGroup></RadioButton>
-                              <Label layoutX="14.0" layoutY="43.0" text="I回" />
-                              <ChoiceBox fx:id="bhwyh" layoutX="41.0" layoutY="38.0" prefHeight="30.0" prefWidth="78.0" />
-                              <ChoiceBox fx:id="bhweh" layoutX="158.0" layoutY="38.0" prefHeight="30.0" prefWidth="75.0" />
-                              <Label layoutX="128.0" layoutY="43.0" text="II回" />
-                              <Label layoutX="245.0" layoutY="43.0" text="长度" />
-                              <TextField fx:id="bhwcd" layoutX="281.0" layoutY="38.0" prefHeight="30.0" prefWidth="57.0" />
-                              <Label layoutX="338.0" layoutY="43.0" text="km" />
-                              <RadioButton fx:id="hwqk" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" text="换位情况" toggleGroup="$radiohwcsGroup" />
-                              <Label layoutX="46.0" layoutY="110.0" text="I段线路相位布置" />
-                              <Label layoutX="15.0" layoutY="140.0" text="I回" />
-                              <Label layoutX="46.0" layoutY="170.0" text="II段线路相位布置" />
-                              <Label layoutX="15.0" layoutY="197.0" text="I回" />
-                              <Label layoutX="46.0" layoutY="231.0" text="III段线路相位布置" />
-                              <Label layoutX="15.0" layoutY="258.0" text="I回" />
-                              <Label layoutX="128.0" layoutY="140.0" text="II回" />
-                              <Label layoutX="245.0" layoutY="140.0" text="长度" />
-                              <Label layoutX="128.0" layoutY="197.0" text="II回" />
-                              <Label layoutX="245.0" layoutY="197.0" text="长度" />
-                              <Label layoutX="128.0" layoutY="258.0" text="II回" />
-                              <Label layoutX="245.0" layoutY="258.0" text="长度" />
-                              <Label layoutX="338.0" layoutY="140.0" text="km" />
-                              <Label layoutX="338.0" layoutY="197.0" text="km" />
-                              <Label layoutX="338.0" layoutY="258.0" text="km" />
-                              <TextField fx:id="hwydcd" layoutX="281.0" layoutY="135.0" prefHeight="30.0" prefWidth="57.0" />
-                              <TextField fx:id="hwedcd" layoutX="281.0" layoutY="192.0" prefHeight="30.0" prefWidth="57.0" />
-                              <TextField fx:id="hwsdcd" layoutX="281.0" layoutY="253.0" prefHeight="30.0" prefWidth="57.0" />
-                              <ChoiceBox fx:id="hwydyh" layoutX="41.0" layoutY="135.0" prefHeight="30.0" prefWidth="78.0" />
-                              <ChoiceBox fx:id="hwedyh" layoutX="41.0" layoutY="192.0" prefHeight="30.0" prefWidth="78.0" />
-                              <ChoiceBox fx:id="hwsdyh" layoutX="41.0" layoutY="253.0" prefHeight="30.0" prefWidth="78.0" />
-                              <ChoiceBox fx:id="hwydeh" layoutX="158.0" layoutY="135.0" prefHeight="30.0" prefWidth="75.0" />
-                              <ChoiceBox fx:id="hwedeh" layoutX="158.0" layoutY="192.0" prefHeight="30.0" prefWidth="75.0" />
-                              <ChoiceBox fx:id="hwsdeh" layoutX="158.0" layoutY="253.0" prefHeight="30.0" prefWidth="75.0" />
-                           </children></AnchorPane>
-                            </content>
-                        </TitledPane>
-                        <TitledPane animated="false" prefHeight="69.0" prefWidth="370.0" text="算法选择">
-                            <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <ChoiceBox fx:id="sfxz" layoutX="1.0" layoutY="1.0" prefHeight="30.0" prefWidth="367.0">
-                                  <String fx:value="卡松修正算法" />
-                              </ChoiceBox>
-                           </children></AnchorPane>
-                            </content>
-                        </TitledPane>
-                        <AnchorPane prefHeight="52.0" prefWidth="370.0">
-                            <children>
-                                <Button fx:id="retInputBtn" layoutX="1.0" layoutY="1.0" mnemonicParsing="false" onAction="#retInputBtnAction" prefHeight="41.0" prefWidth="123.0" text="返回塔型选择" />
-                                <Button fx:id="savePramBt" layoutX="125.0" layoutY="1.0" mnemonicParsing="false" onAction="#savePramAction" prefHeight="41.0" prefWidth="132.0" text="参数保存" />
-                                <Button fx:id="startCalc" layoutX="258.0" layoutY="1.0" mnemonicParsing="false" onAction="#startCalcAction" prefHeight="41.0" prefWidth="110.0" text="开始计算" />
-                            </children>
-                        </AnchorPane>
-                    </children>
-                </VBox>
-            </children>
-        </HBox>
-    </center>
+   <top>
+      <TitledPane animated="false" text="基本参数" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                          <Label layoutX="39.0" layoutY="29.0" text="导线型号:" />
+                  <ChoiceBox fx:id="dxxh" layoutX="135.0" layoutY="24.0" prefWidth="150.0" />
+                          <Label layoutX="32.0" layoutY="80.0" text="导线分裂数:" />
+                  <TextField fx:id="dxfls" layoutX="134.0" layoutY="75.0" prefHeight="30.0" prefWidth="152.0" />
+                          <Label layoutX="39.0" layoutY="129.0" text="导线直径:" />
+                          <TextField fx:id="dxizj" layoutX="134.0" layoutY="124.0" prefHeight="30.0" prefWidth="152.0" />
+                          <Label layoutX="291.0" layoutY="131.0" text="mm" />
+                          <Label layoutX="365.0" layoutY="28.0" text="导线直流电阻:" />
+                          <TextField fx:id="dxzldz" layoutX="476.0" layoutY="24.0" prefHeight="26.0" prefWidth="133.0" />
+                          <Label layoutX="611.0" layoutY="28.0" text="Ω/km" />
+                          <Label layoutX="393.0" layoutY="74.0" text="分裂间距:" />
+                          <TextField fx:id="fljj" layoutX="476.0" layoutY="70.0" prefHeight="26.0" prefWidth="134.0" />
+                          <Label layoutX="615.0" layoutY="74.0" text="mm" />
+                          <Label layoutX="392.0" layoutY="127.0" text="大地电阻:" />
+                          <TextField fx:id="dddz" layoutX="476.0" layoutY="123.0" prefHeight="30.0" prefWidth="133.0" />
+                          <Label layoutX="617.0" layoutY="127.0" text="Ω" />
+                          <Label layoutX="704.0" layoutY="27.0" text="大地电阻率:" />
+                          <TextField fx:id="dddzl" layoutX="801.0" layoutY="23.0" prefHeight="30.0" prefWidth="141.0" />
+                          <Label layoutX="957.0" layoutY="28.0" text="Ωm" />
+                  <Label layoutX="711.0" layoutY="74.0" text="地线直径:" />
+                  <TextField fx:id="dxzj" layoutX="802.0" layoutY="70.0" prefHeight="30.0" prefWidth="139.0" />
+                  <Label layoutX="712.0" layoutY="131.0" text="地线电阻:" />
+                  <TextField fx:id="dxdz" layoutX="802.0" layoutY="126.0" prefHeight="30.0" prefWidth="139.0" />
+                  <Label layoutX="957.0" layoutY="131.0" text="Ω" />
+                  <Label layoutX="957.0" layoutY="75.0" text="m" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </top>
+   <center>
+          <TitledPane animated="false" prefHeight="689.0" prefWidth="1028.0" text="灯塔导线位置参数输入 单位(mm)" BorderPane.alignment="CENTER">
+              <content>
+                  <AnchorPane fx:id="picAnchorPanel" minHeight="0.0" minWidth="0.0" prefHeight="591.0" prefWidth="998.0">
+               <children>
+                  <ImageView fx:id="txImageView" fitHeight="568.0" fitWidth="677.0" layoutX="170.0" layoutY="17.0">
+<!--                     <image>-->
+<!--                        <Image url="@../image/3.png" />-->
+<!--                     </image>-->
+                  </ImageView>
+                  <ChoiceBox fx:id="chooseLg" layoutX="237.0" layoutY="46.0" prefHeight="30.0" prefWidth="48.0">
+                      <String fx:value="G" />
+                      <String fx:value="g" />
+                  </ChoiceBox>
+                  <TextField fx:id="Glx" layoutX="199.0" layoutY="46.0" prefHeight="30.0" prefWidth="39.0" />
+                  <TextField fx:id="Gly" layoutX="285.0" layoutY="46.0" prefHeight="30.0" prefWidth="39.0" />
+                  <ChoiceBox fx:id="chooseLa" layoutX="327.0" layoutY="73.0" prefHeight="30.0" prefWidth="48.0">
+                      <String fx:value="A" />
+                      <String fx:value="B" />
+                      <String fx:value="C" />
+                      <String fx:value="a" />
+                      <String fx:value="b" />
+                      <String fx:value="c" />
+                  </ChoiceBox>
+                  <TextField fx:id="Alx" layoutX="293.0" layoutY="74.0" prefHeight="30.0" prefWidth="39.0" />
+                  <TextField fx:id="Aly" layoutX="375.0" layoutY="73.0" prefHeight="30.0" prefWidth="39.0" />
+                  <ChoiceBox fx:id="chooseLb" layoutX="219.0" layoutY="183.0" prefHeight="30.0" prefWidth="48.0" >
+                      <String fx:value="A" />
+                      <String fx:value="B" />
+                      <String fx:value="C" />
+                      <String fx:value="a" />
+                      <String fx:value="b" />
+                      <String fx:value="c" />
+                  </ChoiceBox>
+                  <TextField fx:id="Blx" layoutX="180.0" layoutY="183.0" prefHeight="30.0" prefWidth="39.0" />
+                  <TextField fx:id="Bly" layoutX="266.0" layoutY="183.0" prefHeight="30.0" prefWidth="39.0" />
+                  <ChoiceBox fx:id="chooseLc" layoutX="278.0" layoutY="271.0" prefHeight="30.0" prefWidth="48.0" >
+                      <String fx:value="A" />
+                      <String fx:value="B" />
+                      <String fx:value="C" />
+                      <String fx:value="a" />
+                      <String fx:value="b" />
+                      <String fx:value="c" />
+                  </ChoiceBox>
+                  <TextField fx:id="Clx" layoutX="239.0" layoutY="271.0" prefHeight="30.0" prefWidth="39.0" />
+                  <TextField fx:id="Cly" layoutX="326.0" layoutY="271.0" prefHeight="30.0" prefWidth="39.0" />
+                  <ChoiceBox fx:id="chooseA1" layoutX="630.0" layoutY="76.0" prefHeight="30.0" prefWidth="48.0">
+                      <String fx:value="A" />
+                      <String fx:value="B" />
+                      <String fx:value="C" />
+                      <String fx:value="a" />
+                      <String fx:value="b" />
+                      <String fx:value="c" />
+                  </ChoiceBox>
+                  <TextField fx:id="Arx" layoutX="591.0" layoutY="76.0" prefHeight="30.0" prefWidth="39.0" />
+                  <TextField fx:id="Ary" layoutX="678.0" layoutY="76.0" prefHeight="24.0" prefWidth="39.0" />
+                  <ChoiceBox fx:id="chooseRg" layoutX="717.0" layoutY="46.0" prefHeight="30.0" prefWidth="48.0" >
+                      <String fx:value="G" />
+                      <String fx:value="g" />
+                  </ChoiceBox>
+                  <TextField fx:id="Grx" layoutX="678.0" layoutY="46.0" prefHeight="30.0" prefWidth="39.0" />
+                  <TextField fx:id="Gry" layoutX="765.0" layoutY="46.0" prefHeight="30.0" prefWidth="39.0" />
+                  <ChoiceBox fx:id="chooseB1" layoutX="746.0" layoutY="183.0" prefHeight="30.0" prefWidth="48.0" >
+                      <String fx:value="A" />
+                      <String fx:value="B" />
+                      <String fx:value="C" />
+                      <String fx:value="a" />
+                      <String fx:value="b" />
+                      <String fx:value="c" />
+                  </ChoiceBox>
+                  <TextField fx:id="Brx" layoutX="707.0" layoutY="183.0" prefHeight="24.0" prefWidth="39.0" />
+                  <TextField fx:id="Bry" layoutX="794.0" layoutY="183.0" prefHeight="30.0" prefWidth="39.0" />
+                  <ChoiceBox fx:id="chooseC1" layoutX="659.0" layoutY="271.0" prefHeight="30.0" prefWidth="48.0" >
+                      <String fx:value="A" />
+                      <String fx:value="B" />
+                      <String fx:value="C" />
+                      <String fx:value="a" />
+                      <String fx:value="b" />
+                      <String fx:value="c" />
+                  </ChoiceBox>
+                  <TextField fx:id="Crx" layoutX="620.0" layoutY="271.0" prefHeight="24.0" prefWidth="39.0" />
+                  <TextField fx:id="Cry" layoutX="707.0" layoutY="271.0" prefHeight="30.0" prefWidth="39.0" />
+               </children>
+                  </AnchorPane>
+              </content>
+          </TitledPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="68.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+                    <Button fx:id="retInputBtn" layoutX="615.0" layoutY="14.0" mnemonicParsing="false" onAction="#retInputBtnAction" prefHeight="41.0" prefWidth="123.0" text="返回" />
+                    <Button fx:id="savePramBt" layoutX="392.0" layoutY="14.0" mnemonicParsing="false" onAction="#savePramAction" prefHeight="41.0" prefWidth="132.0" text="参数保存" />
+                    <Button fx:id="startCalc" layoutX="171.0" layoutY="14.0" mnemonicParsing="false" onAction="#startCalcAction" prefHeight="41.0" prefWidth="110.0" text="开始计算" />
+         </children>
+      </AnchorPane>
+   </bottom>
 </BorderPane>
