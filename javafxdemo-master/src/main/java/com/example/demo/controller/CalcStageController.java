@@ -22,73 +22,8 @@ public class CalcStageController implements Initializable {
     private TextField zxzk;
 
     @FXML
-    private TextField fxzk;
-
-    @FXML
-    private TextField lxzk;
-
-    @FXML
-    private TextField zxdr;
-
-    @FXML
-    private TextField fxdr;
-
-    @FXML
-    private TextField lxdr;
-
-    @FXML
-    private TextField txzxzk;
-
-    @FXML
-    private TextField fxzxzk;
-
-    @FXML
-    private TextField txfxzk;
-
-    @FXML
-    private TextField fxfxzk;
-
-    @FXML
-    private TextField txlxzk;
-
-    @FXML
-    private TextField fxlxzk;
-
-    @FXML
-    private TextField yhxlfxbphs;
-
-    @FXML
-    private TextField yhxllxbphs;
-
-    @FXML
-    private TextField ehxlfxbphs;
-
-    @FXML
-    private TextField ehxllxbphs;
-
-    @FXML
-    private TextField zxxlfxbphs;
-
-    @FXML
-    private TextField zxxllxbphs;
-
-    @FXML
-    private Button zkjz;
-
-    @FXML
-    private Button drjz;
-
-    @FXML
-    private Button xzkjz;
-
-    @FXML
     private Button xdrjz;
 
-    @FXML
-    private Button jgbc;
-
-    @FXML
-    private Button quitBt;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -96,7 +31,6 @@ public class CalcStageController implements Initializable {
     }
 
     public void calcData() {
-        zxzk.setText(DataSource.paramBean.getDxzj() == null ? "" : DataSource.paramBean.getDxzj().toString());
     }
 
     @FXML

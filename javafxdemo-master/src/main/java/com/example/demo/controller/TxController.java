@@ -37,14 +37,6 @@ public class TxController implements Initializable {
 
     @FXML
     void makeSureChoose(ActionEvent event) {
-        RadioButton radioButton = (RadioButton)txChoosePane.getChildren().filtered(item ->
-                "firstChooseBtn".equals(item.getId())).get(0);
-        RadioButton selectedBut = (RadioButton)radioButton.getToggleGroup().getSelectedToggle();
-        String picName = selectedBut.getUserData().toString();
-        // 画图
-        InputStageController controller = ApplicationContextProvider
-                .getBean("inputStageController", InputStageController.class);
-        controller.drawPanePic(picName);
         Stage stage = (Stage) cancelChooseId.getScene().getWindow();
         stage.close();
     }
